@@ -1,1 +1,415 @@
-/* место для вашего кода */
+body {
+  width: 1440px;
+  margin: 0 auto;
+
+}
+
+.text_underline {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+
+
+.header {
+  display: grid;
+  grid-template-columns: 3fr 209px 148px 355px 1fr;
+  grid-template-areas:
+  "header__menu . header__logo . header__address";
+
+  justify-items: center;
+  align-items: center;
+
+  padding: 92px 49px 92px 51px;
+
+
+}
+
+.header__menu {
+  grid-area: header__menu;
+  justify-self: start;
+
+
+}
+
+.header__links-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.02em;
+  white-space: nowrap;
+}
+
+.header__links-list-item {
+  list-style: circle;
+  font-size: 18px;
+
+}
+
+.header__links-list-item span {
+  /* bullet padding */
+  position: relative;
+  left: 0.2em;
+}
+
+.header__links-list-item_no-bullit {
+  list-style: none;
+}
+
+.header__link {
+  font-weight: 400;
+
+  line-height: normal;
+
+}
+
+.header__link_active {
+  text-decoration: none;
+}
+
+.header__logo {
+  grid-area: header__logo;
+
+}
+
+.header__logo-image {
+  width: 148px;
+  display: block;
+}
+
+.address {
+  grid-area: header__address;
+  justify-self: end;
+  align-self: center;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 1.35;
+  white-space: nowrap;
+
+}
+
+.address a {
+  display: block;
+}
+
+.cover {
+  padding: 165px 50px 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 4px -19px;
+  position: relative;
+  display: grid;
+  background-image: url('../images/cover.jpg');
+}
+
+.overlay {
+  opacity: 0.6;
+  background: #000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+.cover__title {
+  color: #fff;
+  font-size: 100px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.aligned-text {
+  display: block;
+  letter-spacing: 30px;
+
+}
+
+.aligned-text_left {
+  text-align: left;
+  position: relative;
+  top: 6px;
+  left: 4px;
+}
+
+.aligned-text_center {
+  text-align: center;
+  line-height: 1.15;
+  position: relative;
+  top: 5px;
+  left: -26px;
+
+
+}
+
+.aligned-text_right {
+  text-align: right;
+  position: relative;
+  top: -2px;
+  left: 4px;
+}
+
+.letter-spacing-extended {
+  position: relative;
+  left: 30px;
+
+}
+
+.no-letter-spacing {
+
+}
+
+.cover__description {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas:
+  ". cover__description-text bet-button";
+  gap: 78px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 135px;
+  z-index: 2;
+
+}
+
+.cover__description-text {
+  grid-area: cover__description-text;
+  text-align: center;
+  line-height: 1.27;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #fff;
+  word-spacing: 17px;
+  font-size: 22px;
+  justify-self: end;
+}
+
+
+.bet-button {
+  grid-area: bet-button;
+  padding: 12px 32px;
+  color: #fff;
+  background-color: transparent;
+  text-align: center;
+  font-size: 22px;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  width: 257px;
+  height: 52px;
+}
+
+.lots {
+  padding: 182px 50px 181px;
+}
+
+.lots__heading {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  align-self: flex-start;
+  padding-left: 44px;
+
+}
+
+.lots__card-list {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 31px 0 31px;
+}
+
+.lots__card-list-item {
+
+}
+
+.card-link {
+  text-decoration: none;
+  display: block;
+  height: 100%;
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 430px;
+
+  min-height: 450px;
+  padding: 50px 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card_type_film {
+  background-image: url('../images/card-lot-01.jpg');
+
+}
+
+.card_type_book {
+  background-image: url('../images/card-lot-02.jpg');
+
+}
+
+.card_type_picture {
+  background-image: url('../images/card-lot-03.jpg');
+
+}
+
+.card__title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.card__text {
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.2;
+  z-index: 1;
+}
+
+.lots__look-more-link {
+  font-size: 20px;
+  line-height: 1;
+  padding-left: 43px;
+
+}
+
+.about {
+  padding: 0 50px 180px;
+}
+
+.about__column {
+  display: grid;
+  grid-template-columns: 430px 1fr;
+  grid-template-rows: 240px 1fr;
+  grid-template-areas:
+  "about__logo about__title"
+  ". about__text-container";
+  justify-content: center;
+
+}
+
+.about__logo {
+  grid-area: about__logo;
+  background-color: #000;
+  border-radius: 50%;
+  width: 240px;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  margin-left: 5px;
+
+
+}
+
+.about__logo-image {
+  display: block;
+  width: 148px;
+
+
+}
+
+.about__title {
+  grid-area: about__title;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  align-self: center;
+  padding: 11px 0 0 28px;
+}
+
+.about__text-container {
+  grid-area: about__text-container;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 28px;
+  padding: 11px 0 0 28px;
+
+}
+
+.about__text {
+  font-size: 20px;
+  line-height: 1.15;
+
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 4px 50px 90px;
+
+
+}
+
+.footer__menu {
+  padding-left: 10px;
+
+}
+
+.footer__menu-list {
+  list-style: none;
+  font-size: 18px;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 4px;
+
+}
+
+.footer__menu-list-item {
+
+}
+
+.footer__menu-link {
+
+}
+
+.footer__link_active {
+  text-decoration: none;
+}
+
+.footer__social-list {
+  display: flex;
+  gap: 48px;
+  grid-area: footer_social;
+  list-style: none;
+}
+
+.footer__social-list-item {
+
+}
+
+.footer__social-link {
+
+
+}
+
+.footer__social-icon {
+  height: 48px;
+}
+
+
+
+
+
