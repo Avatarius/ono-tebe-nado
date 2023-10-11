@@ -250,12 +250,13 @@ body {
 
 .about__column {
   display: grid;
+  grid-template: 240px auto / 430px auto;
   grid-template-areas:
     "about__logo about__title"
     ". about__text_container";
   justify-content: start;
   align-items: center;
-  grid-template: 240px auto / 430px auto;
+
 }
 
 .about__logo {
