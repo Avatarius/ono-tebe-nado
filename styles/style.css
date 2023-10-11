@@ -3,8 +3,8 @@ html {
 }
 
 body {
-  width: 1440px;
   margin: 0 auto;
+  padding: 0 14.45em;
 }
 
 .text_underline {
@@ -15,7 +15,7 @@ body {
 
 .header {
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-columns: 1fr 136px 1fr;
   grid-template-areas: "header__menu header__logo address";
   justify-items: start;
   justify-content: space-between;
@@ -81,8 +81,7 @@ body {
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   opacity: 0.6;
@@ -160,7 +159,7 @@ body {
   border: 1px solid #fff;
   padding: 12px 32px;
   color: #fff;
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 22px;
   text-align: center;
   text-transform: uppercase;
@@ -199,22 +198,21 @@ body {
   padding: 50px 40px;
 }
 
-.card_type_film {
-  background-image: url("../images/card-lot-01.jpg");
+.card_background {
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.card_type_film {
+  background-image: url("../images/card-lot-01.jpg");
 }
 
 .card_type_book {
   background-image: url("../images/card-lot-02.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .card_type_picture {
   background-image: url("../images/card-lot-03.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .card__title {
@@ -238,23 +236,25 @@ body {
 
 .lots__look-more-link {
   display: block;
-  padding: 30px 0 2px 40px;
+  max-width: fit-content;
+  margin: 30px 0 2px 40px;
   font-size: 20px;
 }
 
 .about {
+  display: grid;
+  grid-template-columns: 430px auto;
+  grid-template-areas: "about__logo about__column";
   padding: 179px 50px 180px;
 }
 
 .about__column {
-  display: grid;
-  grid-template: 240px auto / 430px auto;
-  grid-template-areas:
-    "about__logo about__title"
-    ". about__text_container";
-  justify-content: start;
-  align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  grid-area: about__column;
+  justify-content: center;
+  gap: 28px;
+  padding: 100px 0 0 25px;
 }
 
 .about__logo {
@@ -274,19 +274,11 @@ body {
 
 .about__title {
   grid-area: about__title;
-  padding: 10px 0 0 25px;
+  margin-bottom: 75px;
+
   font-weight: 700;
   font-size: 40px;
   text-transform: uppercase;
-}
-
-.about__text_container {
-  display: flex;
-  flex-direction: column;
-  grid-area: about__text_container;
-  justify-content: space-between;
-  gap: 29px;
-  padding: 9px 0 0 25px;
 }
 
 .about__text {
